@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns="http://www.w3.org/1999/html">
+    <title>UpdateUser</title>
+</head>
+<body>
+<form th:method="patch" th:action="@{/update}" th:object="${user}">
+
+  <label for="id">ID: </label>
+  <input type="text" th:field="*{id}" id="id" readonly>
+
+  <label for="name">Имя: </label>
+  <input required type="text" th:field="*{name}" id="name">
+  <label for="lastname">Фамилия: </label>
+  <input required type="text" th:field="*{lastName}" id="lastname">
+  <label for="age">Возраст: </label>
+  <input required type="text" th:field="*{age}" id="age">
+
+  <input type="submit" value="Обновить данные">
+</form>
+
+</body>
+</html>

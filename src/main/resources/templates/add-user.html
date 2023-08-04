@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>AddUser</title>
+</head>
+<body>
+<form th:object="${user}" th:action="@{/add}" method="post">
+  <label for="name">Имя:</label>
+  <input required type="text" id="name" th:field="*{name}" />
+
+  <label for="lastName">Фамилия:</label>
+  <input required type="text" id="lastName" th:field="*{lastName}" />
+
+  <label for="age">Возраст:</label>
+  <input required type="number" id="age" th:field="*{age}" />
+
+  <button type="submit">Создать пользователя</button>
+</form>
+</body>
+</html>
